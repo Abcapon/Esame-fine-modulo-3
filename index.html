@@ -5,12 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix Clone</title>
     <link rel="stylesheet" href="Boostrap/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <nav class="myNavbar navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="assets-5-1/assets/imgs/Netflix_Logo_RGB.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TV Show</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Movies</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Recently Added</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My List</a>
+              </li>
+            </ul>
+            <form class="myForm d-flex" role="search">
+                <a href=""><i class="bi bi-search"></i></a>
+              <p><a href="#">KIDS</a></p>
+              <a href="#"><i class="bi bi-bell-fill"></i></a>
+              <a href="#"><img src="data:image/jpeg;base64,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" alt="User"></a>
+            </form>
+          </div>
+        </div>
+      </nav>
+<section id="title" class="d-flex">
+    <h2>TV Show</h2>
+    <div class="myDropdownTitle dropdown">
+        <button class="myDropdownButton btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+         Generi
+        </button>
+        <ul class="myDropdownMenu dropdown-menu">
+          <li><a class="dropdown-item" href="#">Azione</a></li>
+          <li><a class="dropdown-item" href="#">Commedia</a></li>
+          <li><a class="dropdown-item" href="#">Horror</a></li>
+        </ul>
+      </div>
+</section>
+<main>
+    <section class="cardsSections" id="trendingNow1">
+        <h3>Trending Now</h3>
+        <div class="myCardsSection container-fluid">
+            <div class="myCardsRow row flex-nowrap">
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/1.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/2.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/3.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/4.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/5.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/6.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/7.png" alt="movie1">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="cardsSections" id="trendingNow2">
+        <h3>Trending Now</h3>
+        <div class="myCardsSection container-fluid">
+            <div class="myCardsRow row flex-nowrap">
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/8.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/9.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/10.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/11.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/12.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/13.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/7.png" alt="movie1">
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="cardsSections" id="trendingNow3">
+        <h3>Trending Now</h3>
+        <div class="myCardsSection container-fluid">
+            <div class="myCardsRow row flex-nowrap">
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/15.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/16.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/17.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/7.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/14.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/18.png" alt="movie1">
+                </div>
+                <div class="myCard col-2">
+                    <img src="assets-5-1/assets/imgs/movies/4.png" alt="movie1">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
     <script src="Boostrap/bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
 </body>

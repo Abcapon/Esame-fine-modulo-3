@@ -1,0 +1,83 @@
+body{
+    background-color: black;
+    color: white;
+}
+.myNavbar {
+   background-color: black;
+   position: fixed;
+   z-index: 2;
+}
+.myNavbar .active {
+    color: white;
+}
+.navbar-brand{
+    width: 6.5%;
+}
+.navbar-brand img{
+    width: 100%;
+}
+.myForm{
+    justify-content: space-around;
+    align-items: center;
+}
+.myForm a{
+    padding: 0.5em;
+    color: white;
+    text-decoration: none;
+}
+.myForm p{
+    padding-top: 1em;
+}
+.myForm img{
+    width: 3em
+}
+#title {
+    align-items: center;
+    padding-top: 5em;
+    padding-left: 2em;
+}
+h2 {
+    padding: 0 1em;
+    font-size: 2em;
+}
+.myDropdownTitle {
+    background-color: none;
+}
+.myDropdownButton {
+    color: white;
+    font-size: 2em;
+    border: 1px solid white;
+    border-radius: 0%;
+}
+.myDropdownButton:hover {
+    border: 1px solid white;
+}
+.myDropdownMenu {
+    background-color: black;
+    border: 1px solid white;
+}
+.myDropdownMenu a  {
+    color: white;
+}
+.cardsSections{
+    padding: 3em 1em 0em 1em;
+}
+.cardsSections h3 {
+    padding-left: 1.5em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+}
+.myCardsSection{
+padding-left: 4em;
+}
+.myCard {
+    padding: 0 0.3em;
+    transition: all 0.3s;
+}
+.myCard img{
+    width: 100%;
+}
+.myCard:hover{
+    transform: scale(1.2);
+    z-index: 2;
+}

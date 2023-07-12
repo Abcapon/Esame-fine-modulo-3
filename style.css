@@ -32,12 +32,7 @@ body{
 .myForm img{
     width: 3em
 }
-#searchButton {
-    position: absolute;
-    right: 5.5em;
-    top: 1.8em;
-    color: white;
-}
+
 #title {
     width: 100%;
     align-items: center;
@@ -53,7 +48,6 @@ h2 {
 #titleLeftPart a{
     color: grey;
     border: 1px solid grey;
-    margin: 5px;
     padding: 2px 3px;
 }
 .myDropdownButton {
@@ -70,6 +64,9 @@ h2 {
 }
 .myDropdownMenu a  {
     color: white;
+}
+.customCollpseMenu {
+    padding-left: 2%;
 }
 .cardsSections{
     width: 100%;
@@ -93,4 +90,124 @@ padding-left: 4em;
 .myCard:hover{
     transform: scale(1.2);
     z-index: 2;
+}
+
+
+#search-input {
+    position: absolute;
+    overflow: hidden;
+    background-color: black;
+    color: grey;
+    padding-left: 2em;
+    display: none;
+    transition: width;
+    top: 23%;
+    right: 0;
+}
+
+#searchExpand{
+width: 33%;
+position: relative;
+height: 3em;
+overflow: hidden;
+}
+
+#searchCollapse{
+    width: 50%;
+    position: relative;
+    height: 3em;
+}
+
+
+#search-input.showMyBar1 {
+    display: block;
+    animation-name: searchBar;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#search-input2.showMyBar2 {
+    padding-left: 2em;
+    display: inline-block;
+    animation-name: searchBar2;
+    animation-duration: 1s;
+    animation-fill-mode:forwards;
+}
+
+#myButton {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    position: absolute;
+    top: 27%;
+    left: 92%;
+}
+#myButton2 {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    position: absolute;
+    top: 27%;
+    left: 92%;
+}
+
+#search-input2 {
+    position: absolute;
+    overflow: hidden;
+    background-color: black;
+    color: grey;
+    padding-left: 2em;
+    display: none;
+    transition: width;
+    top: 23%;
+    right: 0;
+}
+#myButton.move1 {
+    animation-name: moveButton1;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-fill-mode:forwards;
+}
+#myButton2.move2 {
+    animation-name: moveButton2;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+    animation-fill-mode:forwards;
+}
+@keyframes searchBar{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes searchBar2{
+    0% {
+        width: 10;
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+    100% {
+        width: 50%;
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+}
+@keyframes moveButton2 {
+    0% {
+        left: 92%;
+    }
+    100% {
+        left: 51%
+    }
+}
+@keyframes moveButton1 {
+    0% {
+        left: 92%;
+    }
+    100% {
+        left: 2%;
+    }
 }

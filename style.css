@@ -2,10 +2,12 @@ body{
     background-color: black;
     color: white;
 }
+/* navbar + navbar elements */
+
 .myNavbar {
    background-color: black;
    position: fixed;
-   z-index: 2;
+   z-index: 3;
    width: 100%;
 }
 .myNavbar .active {
@@ -32,6 +34,7 @@ body{
 .myForm img{
     width: 3em
 }
+/* First section */
 
 #title {
     width: 100%;
@@ -68,6 +71,11 @@ h2 {
 .customCollpseMenu {
     padding-left: 2%;
 }
+/* main + main elements */
+
+main {
+    padding-bottom: 20%;
+}
 .cardsSections{
     width: 100%;
     padding: 1em 1em 2em 1em;
@@ -75,14 +83,16 @@ h2 {
 .cardsSections h3 {
     padding-left: 1.5em;
     padding-bottom: 0.5em;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 .myCardsSection{
 padding-left: 4em;
 }
+/* carousel */
 .myCard {
     padding: 0 0.3em;
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
 }
 .myCard img{
     width: 100%;
@@ -91,7 +101,135 @@ padding-left: 4em;
     transform: scale(1.2);
     z-index: 2;
 }
+/* carousel MD */
 
+#carouselMD1 .carousel-inner{
+    overflow: visible;
+  }
+#carouselMD2 .carousel-inner{
+    overflow: visible;
+  }
+#carouselMD3 .carousel-inner{
+    overflow: visible;
+  }
+.customControlPrev {
+    width: 2em;
+    display: none;
+}
+.customControlNext {
+    width: 2em;
+    display: none;
+}
+
+#carouselMD1:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD1:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
+
+#carouselMD2:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD2:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
+
+#carouselMD3:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD3:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
+
+
+/* footer pagina SM */
+
+#footerSM {
+    background-color: black;
+    padding-right: 7em;
+}
+#footerSM .socialIcons {
+    padding-left: 2em;
+}
+#footerSM .socialIcons i{
+    font-size: 1.5em;
+    padding: 0.5em;
+}
+#footerSM p {
+    font-size: 0.8em;
+}
+#footerSM a{
+    color: white;
+    text-decoration: none;
+}
+#footerSM p {
+    color: grey;
+}
+#footerSM p a{
+    color: grey;
+}
+#footerFirstPartSM .d-flex i{
+    font-size: 1.5em;
+    padding: 0 0.5em;
+}
+#footerFirstPartSM p{
+    padding-left: 0.5em;
+}
+#codiceDiServizioSM a{
+    border: 1px solid grey;
+    padding: 0.5em;
+}
+
+
+/* footer pagina MD */
+
+#footerMD {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    padding-right: 7em;
+}
+#footerMD .footerPart{
+    padding: 0 3em;
+}
+#footerMD .footerPart:not(:first-of-type){
+    padding-top: 2em;
+}
+#footerMD p {
+    font-size: 0.8em;
+}
+#footerMD a{
+    color: white;
+    text-decoration: none;
+}
+#footerMD p {
+    color: grey;
+}
+#footerMD p a{
+    color: grey;
+}
+#footerFirstPartMD .d-flex i{
+    font-size: 1.5em;
+    padding: 0 0.5em;
+}
+#footerFirstPartMD p{
+    padding-left: 0.5em;
+}
+#codiceDiServizioMD a{
+    border: 1px solid grey;
+    padding: 0.5em;
+}
+
+/* parte delle animazioni */
 
 #search-input {
     position: absolute;

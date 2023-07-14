@@ -15,6 +15,7 @@ body{
 }
 #NetflixLogo{
     width: 6.5em;
+    margin: 0;
 }
 .navbar-brand img{
     width: 100%;
@@ -89,17 +90,9 @@ main {
 padding-left: 4em;
 }
 /* carousel */
-.myCard {
-    padding: 0 0.3em;
-    transition: all 0.3s ease-in-out;
-    z-index: 0;
-}
+
 .myCard img{
     width: 100%;
-}
-.myCard:hover{
-    transform: scale(1.2);
-    z-index: 2;
 }
 /* carousel MD */
 
@@ -230,55 +223,75 @@ padding-left: 4em;
 }
 
 /* parte delle animazioni */
-
-#search-input {
-    position: absolute;
-    overflow: hidden;
-    background-color: black;
-    color: grey;
-    padding-left: 2em;
-    display: none;
-    transition: width;
-    top: 23%;
-    right: 0;
+/* cards animation */
+.myCard {
+    padding: 0 0.3em;
+    transition: all 0.3s ease-in-out;
+    z-index: 0;
 }
-
-#searchExpand{
-width: 33%;
-position: relative;
-height: 3em;
-overflow: hidden;
+.myCard:hover{
+    transform: scale(1.2);
+    z-index: 2;
 }
+/* search button animations */
 
+/* button sm */
 #searchCollapse{
-    width: 50%;
+    width: 45%;
     position: relative;
     height: 3em;
+    overflow: hidden;
 }
-
-
+#search-input {
+    position: absolute;
+    width: 100%;
+    background-color: black;
+    color: grey;
+    padding-left: 1.5em;
+    transform: translateX(100%);
+    top: 23%;
+    right: 0;
+    transition: all .3s ease;
+}
+#search-input::placeholder {
+    font-size: 0.8em;
+}
 #search-input.showMyBar1 {
-    display: block;
-    animation-name: searchBar;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    transform: translateX(0%);
 }
-
-#search-input2.showMyBar2 {
-    padding-left: 2em;
-    display: inline-block;
-    animation-name: searchBar2;
-    animation-duration: 1s;
-    animation-fill-mode:forwards;
-}
-
 #myButton {
     background-color: rgba(0, 0, 0, 0);
     color: white;
     border: none;
     position: absolute;
     top: 27%;
-    left: 92%;
+    left: 84%;;
+    transition: all .3s ease;
+}
+#myButton.move1 {
+    left: 0%;
+}
+/* button md */
+
+#searchExpand{
+    width: 33%;
+    position: relative;
+    height: 3em;
+    overflow: hidden;
+}
+#search-input2 {
+    position: absolute;
+    background-color: black;
+    color: grey;
+    padding-left: 2em;
+    transform: translateX(100%);
+    top: 23%;
+    right: 0;
+    transition: all .3s ease;
+}
+#search-input2.showMyBar2 {
+    transform: translateX(0%);
+    
 }
 #myButton2 {
     background-color: rgba(0, 0, 0, 0);
@@ -287,65 +300,8 @@ overflow: hidden;
     position: absolute;
     top: 27%;
     left: 92%;
-}
-
-#search-input2 {
-    position: absolute;
-    overflow: hidden;
-    background-color: black;
-    color: grey;
-    padding-left: 2em;
-    display: none;
-    transition: width;
-    top: 23%;
-    right: 0;
-}
-#myButton.move1 {
-    animation-name: moveButton1;
-    animation-duration: 0.9s;
-    animation-timing-function: ease;
-    animation-fill-mode:forwards;
+    transition: all .3s ease;
 }
 #myButton2.move2 {
-    animation-name: moveButton2;
-    animation-duration: 0.9s;
-    animation-timing-function: ease;
-    animation-fill-mode:forwards;
-}
-@keyframes searchBar{
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes searchBar2{
-    0% {
-        width: 10;
-        transform-origin: right;
-        transform: scaleX(0);
-    }
-    100% {
-        width: 50%;
-        transform-origin: right;
-        transform: scaleX(1);
-    }
-}
-@keyframes moveButton2 {
-    0% {
-        left: 92%;
-    }
-    100% {
-        left: 51%
-    }
-}
-@keyframes moveButton1 {
-    0% {
-        left: 92%;
-    }
-    100% {
-        left: 2%;
-    }
+    left: 52%;
 }

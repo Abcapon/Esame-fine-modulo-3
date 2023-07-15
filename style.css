@@ -4,6 +4,45 @@ body{
 }
 /* navbar + navbar elements */
 
+
+#logoButton {
+    border: none;
+}
+#logoButton img {
+    width: 8em;
+    margin: 0;
+}
+#logoButton::after{
+    content: none;
+}
+
+
+#userButton img{
+    width: 2em;
+}
+
+#showList p {
+    margin: 0;
+    padding: 0 0.5em;
+}
+#showList a{
+    text-decoration: none;
+    color: grey;
+}
+#showList p:hover a{
+   color: white;
+}
+
+#userDropdownMenu {
+    background-color: grey;
+}
+.dropdown-divider{
+    border-top: 1px solid white;
+}
+
+#rightPardLG{
+    width: 40%;
+}
 .myNavbar {
    background-color: black;
    position: fixed;
@@ -20,6 +59,9 @@ body{
 .navbar-brand img{
     width: 100%;
 }
+#navbarRight {
+    width: 60%;
+}
 .myForm{
     justify-content: space-around;
     align-items: center;
@@ -29,18 +71,32 @@ body{
     color: white;
     text-decoration: none;
 }
+#notificationBell {
+    color: white;
+}
 .myForm p{
     padding-top: 1em;
 }
+#myDropdownIcon {
+    border: 0;
+    padding: 0;
+}
+#myDropdownIcon:focus {
+    box-shadow:none;
+    
+}
 .myForm img{
     width: 3em
+}
+.navbar-toggler img {
+    width: 1em;
 }
 /* First section */
 
 #title {
     width: 100%;
     align-items: center;
-    padding: 6% 2% 2% 2%;
+    padding: 70px 2% 2% 2%;
 }
 h2 {
     padding: 0 1em;
@@ -74,9 +130,6 @@ h2 {
 }
 /* main + main elements */
 
-main {
-    padding-bottom: 20%;
-}
 .cardsSections{
     width: 100%;
     padding: 1em 1em 2em 1em;
@@ -103,6 +156,15 @@ padding-left: 4em;
     overflow: visible;
   }
 #carouselMD3 .carousel-inner{
+    overflow: visible;
+  }
+#carouselMD4 .carousel-inner{
+    overflow: visible;
+  }
+#carouselMD5 .carousel-inner{
+    overflow: visible;
+  }
+#carouselMD6 .carousel-inner{
     overflow: visible;
   }
 .customControlPrev {
@@ -141,6 +203,32 @@ padding-left: 4em;
     z-index: 3;
 }
 
+#carouselMD4:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD4:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
+
+#carouselMD5:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD5:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
+
+#carouselMD6:hover .customControlPrev{
+    display: block;
+    z-index: 3;
+}
+#carouselMD6:hover .customControlNext{
+    display: block;
+    z-index: 3;
+}
 
 /* footer pagina SM */
 
@@ -183,14 +271,16 @@ padding-left: 4em;
 
 /* footer pagina MD */
 
+
 #footerMD {
     position: fixed;
-    z-index: 3;
-    width: 100%;
     bottom: 0;
+    width: 100%;
     background-color: black;
     padding-right: 7em;
+    z-index: 3;
 }
+/* ho preferito assegnare il position fixed solo alla "versione schermo grande" in quanto su schermo ridotto è troppo grande e impedise la visione di gran parte della pagina */
 #footerMD .footerPart{
     padding: 0 3em;
 }
@@ -231,13 +321,22 @@ padding-left: 4em;
 }
 .myCard:hover{
     transform: scale(1.2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     z-index: 2;
 }
 /* search button animations */
 
 /* button sm */
+
 #searchCollapse{
-    width: 45%;
+    width: 70%;
+    position: relative;
+    height: 3em;
+    overflow: hidden;
+    right: 0.5em;
+}
+#searchCollapse2{
+    width: 40%;
     position: relative;
     height: 3em;
     overflow: hidden;
@@ -264,8 +363,8 @@ padding-left: 4em;
     color: white;
     border: none;
     position: absolute;
-    top: 27%;
-    left: 84%;;
+    top: 26%;
+    left: 80%;
     transition: all .3s ease;
 }
 #myButton.move1 {
@@ -274,7 +373,7 @@ padding-left: 4em;
 /* button md */
 
 #searchExpand{
-    width: 33%;
+    width: 75%;
     position: relative;
     height: 3em;
     overflow: hidden;
@@ -303,5 +402,10 @@ padding-left: 4em;
     transition: all .3s ease;
 }
 #myButton2.move2 {
-    left: 52%;
+    left: 0%;
 }
+@media (min-width: 768px) {
+    main {
+        padding-bottom: 35vh;
+    }
+  }
